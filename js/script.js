@@ -1,4 +1,5 @@
 var navOffset;
+var scrollPos
 
 $(window).on("load", function(){
     
@@ -6,18 +7,33 @@ $(window).on("load", function(){
         $(".loader").fadeOut(900);
     });
 
-    navOffset = jQuery("#navbar").offset().top;
+    //navOffset = jQuery("#navbar").offset().top;
+    navOffset = $(window).height();
+    scrollPos = jQuery(window).scrollTop();
     this.console.log(jQuery("#navbar").offset().top);
 })
+
+
 
 $(document).ready(function() {
     
     jQuery("#navbar").wrap('<div class="nav-placeholder"></div>')
     jQuery(".nav-placeholder").height(jQuery("#navBar").outerHeight());
 
+    $(window).resize(function() {
+        this.console.log("Height:" +$(window).height());
+        //navOffset = jQuery("#navbar").offset().top;
+        navOffset = $(window).height();
+        this.console.log("Window Resized: navOffset:" + navOffset + " scrollPos:" + scrollPos);
+        scrollPos = jQuery(window).scrollTop();
+    })
+
     jQuery(window).scroll(function(){
+
+        console.log("Scroll: navOffset:" + navOffset + " scrollPos:" + scrollPos);
         
-        var scrollPos = jQuery(window).scrollTop();
+        
+        scrollPos = jQuery(window).scrollTop();
         this.console.log(jQuery("#navbar").offset().top);
         if (scrollPos >= navOffset) {
             jQuery("#navbar").addClass("fixed");
