@@ -94,6 +94,10 @@ body {
     border-radius: 0;
 }
 
+.nav-placeholder {
+    height:80px;
+}
+
 #navbar {
     z-index: 10;
 }
@@ -104,4 +108,5 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    
 }

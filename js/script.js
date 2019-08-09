@@ -10,15 +10,13 @@ $(window).on("load", function(){
 
 $(document).ready(function() {
     
-    //jQuery("#navbar").wrap('<div class="nav-placeholder"></div>')
-    //jQuery(".nav-placeholder").height(jQuery("#navBar").outerHeight());
+    jQuery("#navbar").wrap('<div class="nav-placeholder"></div>')
+    jQuery(".nav-placeholder").height(jQuery("#navBar").outerHeight());
 
     jQuery(window).scroll(function(){
         
         var scrollPos = jQuery(window).scrollTop();
-
-        this.console.log(navOffset)
-        
+        this.console.log(jQuery("#navbar").offset().top);
         if (scrollPos >= navOffset) {
             jQuery("#navbar").addClass("fixed");
         } else {
