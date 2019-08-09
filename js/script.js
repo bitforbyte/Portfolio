@@ -1,6 +1,7 @@
 var navOffset;
 
 $(window).on("load", function(){
+    
     $(".loader .inner").fadeOut(800, function(){
         $(".loader").fadeOut(900);
     });
