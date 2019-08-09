@@ -86,17 +86,18 @@ body {
 }
 
 /* Padding to fix image wrap problem */
-/*.main {
+.main {
     padding: 0 40px;
-}*/
+}
 
 .navbar {
     border-radius: 0;
 }
 
+/*
 .nav-placeholder {
     height:80px;
-}
+}*/
 
 #navbar {
     z-index: 10;
