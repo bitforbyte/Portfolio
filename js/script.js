@@ -6,6 +6,7 @@ $(window).on("load", function(){
     });
 
     navOffset = jQuery("#navbar").offset().top;
+    this.console.log(jQuery("#navbar").offset().top);
 })
 
 $(document).ready(function() {
