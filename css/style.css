@@ -13,6 +13,7 @@ body {
     background-color: rgba(0,0,0,0.6);
 }
 
+
 .slides-navigation .prev,
 .slides-navigation .next {
     width: 47px;
@@ -91,4 +92,16 @@ body {
 
 .navbar {
     border-radius: 0;
+}
+
+#navbar {
+    z-index: 10;
+}
+
+
+/* Make the nav bar sticky */
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
