@@ -157,14 +157,14 @@ body {
     z-index: -1;
 }
 
-.card {
-    float: left;
-    width: 33.333%;
-    padding: .75rem;
-    margin-bottom: 2rem;
-    border: 0;
-}
-
 .card img {
     width: 100%;
+}
+
+.card p {
+    width: 100%;
+}
+
+.card-text {
+    word-wrap: break-word;
 }
