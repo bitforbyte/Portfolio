@@ -67,6 +67,11 @@ body {
 
 .aboutImage {
     max-width: 100%;
+    height: 370px;
+}
+
+.lowerBackground {
+    background-image: linear-gradient(to bottom right, #7f8c8d, #474787);
 }
 
 .loader {
@@ -92,16 +97,21 @@ body {
 
 .navbar {
     border-radius: 0;
+    z-index: 10;
+
 }
 
 
 .nav-placeholder {
-    height:80px;
+    height:50px;
 }
 
 #navbar {
     z-index: 10;
+    margin-bottom: 0px;
 }
+
+
 
 
 /* Make the nav bar sticky */
@@ -110,4 +120,35 @@ body {
     top: 0;
     width: 100%;
     
+}
+
+#about .container .row .col-md-7 {
+    text-align: justify;
+    color: #ecf0f1;
+}
+
+#about .container .row .col-md-7  h4{
+    text-align: center;
+}
+
+
+#test a {
+    opacity: 0;
+
+    -webkit-transition: opacity 2s ease-in;
+       -moz-transition: opacity 2s ease-in;
+        -ms-transition: opacity 2s ease-in;
+         -o-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
+}
+
+#test a.load {
+    opacity: 1;
+}
+
+#aboutOverlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    z-index: -1;
 }

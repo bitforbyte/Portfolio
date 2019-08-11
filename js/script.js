@@ -1,40 +1,39 @@
 var navOffset;
-var scrollPos
+var scrollPos;
+var navSelected;
 
 $(window).on("load", function(){
-    
+    //$('nav').hide();
     $(".loader .inner").fadeOut(800, function(){
         $(".loader").fadeOut(900);
+        
     });
 
-    //navOffset = jQuery("#navbar").offset().top;
     navOffset = $(window).height();
-    scrollPos = jQuery(window).scrollTop();
-    this.console.log(jQuery("#navbar").offset().top);
+    //navSelected = 
+    //$('nav').show();
 })
 
-
-
 $(document).ready(function() {
+
+    //$("#test a").addClass("load");
     
     jQuery("#navbar").wrap('<div class="nav-placeholder"></div>')
     jQuery(".nav-placeholder").height(jQuery("#navBar").outerHeight());
 
+    // Get the navOffset when page is reset
     $(window).resize(function() {
-        this.console.log("Height:" +$(window).height());
-        //navOffset = jQuery("#navbar").offset().top;
+        //this.console.log("Height:" +$(window).height());
+
         navOffset = $(window).height();
-        this.console.log("Window Resized: navOffset:" + navOffset + " scrollPos:" + scrollPos);
-        scrollPos = jQuery(window).scrollTop();
+
+        //scrollPos = jQuery(window).scrollTop();
     })
 
-    jQuery(window).scroll(function(){
-
-        console.log("Scroll: navOffset:" + navOffset + " scrollPos:" + scrollPos);
-        
-        
+    // Assign the sticky property to the navbar
+    jQuery(window).scroll(function(){        
         scrollPos = jQuery(window).scrollTop();
-        this.console.log(jQuery("#navbar").offset().top);
+
         if (scrollPos >= navOffset) {
             jQuery("#navbar").addClass("fixed");
         } else {
@@ -43,6 +42,27 @@ $(document).ready(function() {
         
     });
 
+    // Smooth scroll to section
+    $(".nav a").on("click", function() {
+
+        if (this.hash != ""){
+            event.preventDefault();
+
+            // store hash
+            var hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function() {
+                // Add the hash to the url when done scrolling
+                window.location.hash = hash;
+                $(".nav").find(".active").removeClass("active");
+                $(this).parent().addClass("active");
+            })
+        }
+        
+    }) 
+        
     
     $('#slides').superslides({
         animation: 'fade',
@@ -60,24 +80,3 @@ $(document).ready(function() {
 
 
 });
-
-/*
-// When the window is scrolled
-window.onscroll = function() {moveNavBar()};
-
-// Get the navbar
-var navbar = document.getElementById("navbar");
-
-// Get the offset positions of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position.
-// Remove when leacing the scroll position
-function moveNavBar() {
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-    } else {
-        navbar.classList.remove("sticky");
-    }
-}*/
-
