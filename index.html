@@ -26,7 +26,7 @@
         <!--<script src="/js/bootstrap.min.js"></script>-->
 
     </head>
-    <body>
+    <body class="lowerBackground">
         
         <!-- Loading Screen -->
         <div class="loader">
@@ -81,7 +81,7 @@
                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li><a href="#slides">Home</a></li>
-                            <li><a href="#aboutMe">About</a></li>
+                            <li><a href="#Landing">About</a></li>
                             <li><a href="#skills">Skills</a></li>
                             <li><a href="#portfolio">Projects</a></li>
                             <li><a href="#contact">Contact Me</a></li>
@@ -92,19 +92,20 @@
         </div>
 
         <!-- About me section to provide image and Learn who I am -->
-        <div id="about"  class="lowerBackground">
-            <div id="aboutOverlay">
+        <div id="about">
+            <span id="aboutLanding"></span>
+            <div id="sectionOverlay">
                 <div class="section">
 
                     <div class="container">
                     
                         <div class="row">
 
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                                 <img id="aboutMe" class="aboutImage" src="img/Me.jpg">
                             </div>
 
-                            <div class="col-md-7">
+                            <div class="col-md-6">
                                 <h4>Hello! I'm Kendall Nicley</h4>
                                 <hr>
                                 <p> 
@@ -128,47 +129,79 @@
                     </div>
                 </div>
             </div>
-
+        </div>
         
 
-            <!-- Skill section to show off my sweet skills -->
-            <div id="skills" class="section">
+        <!-- Skill section to show off my sweet skills -->
+        <div id="skills" class="section">
+            
 
-                <div class="container">
-                    <div class="row">
-                        <div class="heading">
-                            <h2>Skills</h2>
-                        </div>
-                        
-                        
+            <div class="container">
+                <div class="row">
+                    <div class="heading">
+                        <h2>Skills</h2>
                     </div>
+                    
+                    
                 </div>
             </div>
+        </div>
 
-            <!-- Portfolio showing projects I've done -->
+        <!-- Portfolio showing projects I've done -->
+        <div id="sectionOverlay">
             <div id="portfolio" class="section">
                 <div class="container">
                     <div class="row">
-                        <div class="heading">
-                            <h2>Projects</h2>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
+                        <div class="col-md-4">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="img/tmp/thumbs/01.jpg" alt="Photo1">
+                                    </div>
 
-            <!-- Contact information -->
-            <div id="contact" class="section">
-                <div class="container">
+                                    <div class="flip-card-back">
+                                        <h1>Project 1</h1>
+                                        <p>Project Description</p>
+                                        <a href="#">Find out more!</a>
+                                    </div>
+                                </div>
+                            </div>
+                                                        
+                        </div>
+                        <div class="col-md-4">
+                            <p>Project 2</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p>Project 3</p>
+                        </div>
+                    </div>
                     <div class="row">
-                        <div class="heading">
-                            <h2>Contact Me</h2>
+                        <div class="col-md-4">
+                            <p>Project 4</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p>Project 5</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p>Project 6</p>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
+
+        <!-- Contact information -->
+        <div id="contact" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="heading">
+                        <h2>Contact Me</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
 
         <!-- Scripts span to collapse -->
         <span>
