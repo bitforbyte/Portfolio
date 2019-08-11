@@ -161,7 +161,7 @@ body {
 .flip-card {
     background-color: transparent;
     width: 370px; /* Change to be whatever */
-    height:200px; /* */
+    height:250px; /* */
     perspective: 1000px;
 }
 
@@ -207,7 +207,7 @@ body {
 }
 
 #portfolio .container .row .col-md-4 .flip-card .flip-card-inner .flip-card-front .projectFooter{
-    position: fixed;
+    
     bottom: 0;
     width: 100%;
     height: 20%;
@@ -215,8 +215,11 @@ body {
 }
 
 #portfolio .container .row .col-md-4 .flip-card .flip-card-inner .flip-card-front .projectFooter p{
-    position: absolute;
-    bottom: 0px;
-    left: 40%;
     color: white;
+    display: inline-block;
+    margin: 15px 0;
+}
+
+#portfolio .container .row {
+    height: 300px;
 }
