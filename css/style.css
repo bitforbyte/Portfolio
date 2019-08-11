@@ -221,5 +221,9 @@ body {
 }
 
 #portfolio .container .row {
-    height: 300px;
+    margin-bottom: 25px;
+}
+
+#portfolio .container .row .col-md-4 {
+    width: 385px;
 }
