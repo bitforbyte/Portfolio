@@ -10,24 +10,23 @@ $(window).on("load", function(){
     });
 
     navOffset = $(window).height();
-    //navSelected = 
-    //$('nav').show();
+
+    // Set the bar incase its loaded halfway on the page
+    if (jQuery(window).scrollTop() >= navOffset) {
+        jQuery("#navbar").addClass("fixed");
+    } else {
+        jQuery("#navbar").removeClass("fixed");
+    }
 })
 
 $(document).ready(function() {
-
-    //$("#test a").addClass("load");
     
     jQuery("#navbar").wrap('<div class="nav-placeholder"></div>')
     jQuery(".nav-placeholder").height(jQuery("#navBar").outerHeight());
 
     // Get the navOffset when page is reset
     $(window).resize(function() {
-        //this.console.log("Height:" +$(window).height());
-
         navOffset = $(window).height();
-
-        //scrollPos = jQuery(window).scrollTop();
     })
 
     // Assign the sticky property to the navbar
@@ -50,16 +49,17 @@ $(document).ready(function() {
 
             // store hash
             var hash = this.hash;
+            var offset = $(".navbar-header").height();
+            //console.log(offset);
+
+            // Close the navbar when small
+            var navButton = $(".navbar-collapse").collapse('hide');
 
             $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function() {
-                // Add the hash to the url when done scrolling
-                window.location.hash = hash;
-                $(".nav").find(".active").removeClass("active");
-                $(this).parent().addClass("active");
-            })
+                scrollTop: $(hash).offset().top - offset
+            }, 800, function() {})
         }
+
         
     }) 
         
