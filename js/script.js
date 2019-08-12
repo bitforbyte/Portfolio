@@ -36,6 +36,8 @@ $(document).ready(function() {
         });
     })
 
+    
+
     // Assign the sticky property to the navbar
     jQuery(window).scroll(function(){        
         scrollPos = jQuery(window).scrollTop();
@@ -45,7 +47,6 @@ $(document).ready(function() {
         } else {
             jQuery("#navbar").removeClass("fixed");
         }
-        
         
     });
 
