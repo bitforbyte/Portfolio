@@ -65,6 +65,10 @@ body {
     padding: 100px 0;
 }
 
+#portfolio {
+    padding-top: 0
+}
+
 .aboutImage {
     max-width: 100%;
     height: 370px;
@@ -178,6 +182,7 @@ body {
 #sectionOverlay h1 {
     text-align: center;
     padding-top: 50px;
+    color:white;
 }
 
 #sectionOverlay hr {
@@ -200,6 +205,10 @@ body {
 .contactSection {
     color: white;
     margin-bottom: 100px;
+}
+
+.subHeading {
+    font-size: 30px;
 }
 
 .contactButton {
