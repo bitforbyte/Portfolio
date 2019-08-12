@@ -27,7 +27,7 @@ $(document).ready(function() {
     $('.projectHR').css({
         'width': ($('.container').width() + 'px')
     });
-    console.log($('.container').width() )
+    //console.log($('.container').width() )
     // Get the navOffset when page is reset
     $(window).resize(function() {
         navOffset = $(window).height();
@@ -50,10 +50,10 @@ $(document).ready(function() {
     });
 
     // Smooth scroll to section
-    $(".nav a").on("click", function() {
+    $(".nav a").on("click", function(eve) {
 
         if (this.hash != ""){
-            event.preventDefault();
+            eve.preventDefault();
 
             // store hash
             var hash = this.hash;
@@ -64,7 +64,7 @@ $(document).ready(function() {
 
             $('html, body').animate({
                 scrollTop: $(hash).offset().top - offset
-            }, 1000, function() {})
+            }, 1200, function() {})
         }
 
         
