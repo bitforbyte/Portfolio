@@ -61,6 +61,10 @@ body {
     font-size: 23px;
 }
 
+.titleMessage a {
+    color: white;
+}
+
 .section {
     padding: 100px 0;
 }
