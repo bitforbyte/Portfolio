@@ -36,7 +36,9 @@ $(document).ready(function() {
         });
     })
 
+    // 
     
+      
 
     // Assign the sticky property to the navbar
     jQuery(window).scroll(function(){        
@@ -85,6 +87,5 @@ $(document).ready(function() {
         startDelay: 1000,
         showCursor: false
     });
-
 
 });
