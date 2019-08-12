@@ -24,9 +24,16 @@ $(document).ready(function() {
     jQuery("#navbar").wrap('<div class="nav-placeholder"></div>')
     jQuery(".nav-placeholder").height(jQuery("#navBar").outerHeight());
 
+    $('.projectHR').css({
+        'width': ($('.container').width() + 'px')
+    });
+    console.log($('.container').width() )
     // Get the navOffset when page is reset
     $(window).resize(function() {
         navOffset = $(window).height();
+        $('.projectHR').css({
+            'width': ($('.container').width() + 'px')
+        });
     })
 
     // Assign the sticky property to the navbar
@@ -39,6 +46,7 @@ $(document).ready(function() {
             jQuery("#navbar").removeClass("fixed");
         }
         
+        
     });
 
     // Smooth scroll to section
@@ -50,14 +58,13 @@ $(document).ready(function() {
             // store hash
             var hash = this.hash;
             var offset = $(".navbar-header").height();
-            //console.log(offset);
 
             // Close the navbar when small
-            var navButton = $(".navbar-collapse").collapse('hide');
+            $(".navbar-collapse").collapse('hide');
 
             $('html, body').animate({
                 scrollTop: $(hash).offset().top - offset
-            }, 800, function() {})
+            }, 1000, function() {})
         }
 
         
