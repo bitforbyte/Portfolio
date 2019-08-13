@@ -27,12 +27,25 @@ $(document).ready(function() {
     $('.projectHR').css({
         'width': ($('.container').width() + 'px')
     });
+    
+    $('.endSection').css({
+        'width': ($('.container').width() + 'px')
+    });
+    $('.skillHR').css({
+        'width': ($('.endSection').width() + 'px')
+    });
     //console.log($('.container').width() )
     // Get the navOffset when page is reset
     $(window).resize(function() {
         navOffset = $(window).height();
         $('.projectHR').css({
             'width': ($('.container').width() + 'px')
+        });
+        $('.endSection').css({
+            'width': ($('.container').width() + 'px')
+        });
+        $('.skillHR').css({
+            'width': ($('.endSection').width() + 'px')
         });
     })
 

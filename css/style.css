@@ -242,6 +242,7 @@ body {
 
 .skillsSection {
     color: #fff;
+    padding-top: 0;
 }
 
 .endSection {
@@ -266,6 +267,10 @@ body {
     padding: 1rem 10px;
     font-size: 1.2rem;
     
+}
+
+#skills h1 {
+    text-align: center;
 }
 
 
