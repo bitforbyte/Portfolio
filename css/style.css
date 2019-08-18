@@ -56,7 +56,7 @@ body {
     letter-spacing: 7px;
 }
 
-.titleMessage .heading .main{
+.titleMessage .heading .mainInfo{
     font-size: 50px;
 }
 
@@ -106,7 +106,7 @@ body {
 }
 
 /* Padding to fix image wrap problem */
-.main {
+.mainInfo {
     padding: 0 40px;
 }
 
