@@ -19,11 +19,7 @@ $(window).on("load", function(){
     }
 })
 
-$(document).ready(function() {
-    
-    jQuery("#navbar").wrap('<div class="nav-placeholder"></div>')
-    jQuery(".nav-placeholder").height(jQuery("#navBar").outerHeight());
-
+function alignLine() {
     $('.projectHR').css({
         'width': ($('.container').width() + 'px')
     });
@@ -34,23 +30,22 @@ $(document).ready(function() {
     $('.skillHR').css({
         'width': ($('.endSection').width() + 'px')
     });
-    //console.log($('.container').width() )
+}
+
+$(document).ready(function() {
+    // Fix navbar jumping and height
+    jQuery("#navbar").wrap('<div class="nav-placeholder"></div>')
+    jQuery(".nav-placeholder").height(jQuery("#navBar").outerHeight());
+
+    // Align the horizontal line when the page is resized to match container width
+    alignLine();
+    
     // Get the navOffset when page is reset
     $(window).resize(function() {
         navOffset = $(window).height();
-        $('.projectHR').css({
-            'width': ($('.container').width() + 'px')
-        });
-        $('.endSection').css({
-            'width': ($('.container').width() + 'px')
-        });
-        $('.skillHR').css({
-            'width': ($('.endSection').width() + 'px')
-        });
-    })
-
-    // 
-    
+        alignLine();
+ 
+    })   
       
 
     // Assign the sticky property to the navbar
@@ -94,9 +89,9 @@ $(document).ready(function() {
     });
 
     var typed = new Typed(".typed", {
-        strings: ["Full Stack Engineer"],
-        typeSpeed: 80,
-        loop: false,
+        strings: ["Software Engineer","Full Stack Developer"],
+        typeSpeed: 100,
+        loop: true,
         startDelay: 1000,
         showCursor: false
     });
