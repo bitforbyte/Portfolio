@@ -8,18 +8,18 @@
         <meta name="description" content="My Personal Portfolio"/>
         <meta name="theme-color" content="#333"/>
         <!--Bootstrap-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
 
 
         <!-- SuperSlider -->
-        <link rel="stylesheet" type="text/css" href="css/superslides.css">
+        <link rel="stylesheet" type="text/css" href="css/superslides.css" media="none" onload="if(media!='all')media='all'">
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" media="none" onload="if(media!='all')media='all'">
 
         <!-- My Css -->
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" >
 
     </head>
     <body class="lowerBackground">
@@ -35,9 +35,15 @@
 
             <!-- Image Containers -->
             <div class="slides-container">
-                <img src="img/TrainTracks.webp" alt="">
-                <img src="img/highway.webp" alt="">
-                <img src="img/Dark_Road.webp" alt="">
+                <img src="img/large/TrainTracks.webp" alt=""
+                     srcset="img/large/TrainTracks.webp 2x,
+                             img/small/TrainTracks.webp 1x">
+                <img src="img/large/highway.webp" alt=""
+                     srcset="img/large/highway.webp 2x,
+                             img/small/highway.webp 1x">
+                <img src="img/large/Dark_Road.webp" alt=""
+                     srcset="img/large/Dark_Road.webp 2x,
+                             img/large/Dark_Road.webp 1x">
             </div>
 
             <!-- Display My Name and Titles -->
@@ -94,14 +100,17 @@
         <div id="about">
             <span id="aboutLanding"></span>
             <div class="sectionOverlay">
+                
                 <div class="section">
-
                     <div class="container">
                     
                         <div class="row">
 
                             <div class="col-md-6">
-                                <img id="aboutMe" class="aboutImage" src="img/me_thumb.webp" alt="Picture of me at UT Expo">
+                                <img id="aboutMe" class="aboutImage" src="img/large/me_thumb.webp" 
+                                    srcset="img/large/me_thumb.webp 800w,
+                                            img/small/me_thumb.webp 400w" 
+                                    alt="Picture of me at UT Expo">
                             </div>
 
                             <div class="col-md-6">
@@ -308,7 +317,7 @@
                         <div class="row">
                             <div class="col-md-4 box">
                                 <div class="card">
-                                    <img class="card-img-top" src="img/graph.webp" alt="insight2 pic">
+                                    <img class="card-img-top" src="img/large/graph.webp" alt="insight2 pic">
                                     <div class="card-body">
                                         <h4 class="card-title">Insight 2</h4>
                                         <p class="card-text">This project was done for a customer we had which involved implementing a 
@@ -318,7 +327,7 @@
                             </div>
                             <div class="col-md-4 box ">
                                 <div class="card">
-                                    <img class="card-img-top" src="img/Drives.webp" alt="map reduce pic">
+                                    <img class="card-img-top" src="img/large/Drives.webp" alt="map reduce pic">
                                     <div class="card-body">
                                         <h4 class="card-title">Map Reduce</h4>
                                         <p class="card-text">Takes data given and reduces it into an internal generic list.
@@ -328,7 +337,7 @@
                             </div>
                             <div class="col-md-4 box">
                                 <div class="card">
-                                    <img class="card-img-top" src="img/Photos.webp" alt="ppm editor pic">
+                                    <img class="card-img-top" src="img/large/Photos.webp" alt="ppm editor pic">
                                     <div class="card-body">
                                         <h4 class="card-title">PPM Editor</h4>
                                         <p class="card-text">A project that implements an image modification program using both python and javascript. 
@@ -343,7 +352,7 @@
                         <div class="row">
                                 <div class="col-md-4 box">
                                     <div class="card">
-                                        <img class="card-img-top" src="img/monitorCode.webp" alt="c# assembler pic">
+                                        <img class="card-img-top" src="img/large/monitorCode.webp" alt="c# assembler pic">
                                         <div class="card-body">
                                             <h4 class="card-title">C# Assembler</h4>
                                             <p class="card-text">Project creates code that provide assembly functionality using C#.
@@ -353,7 +362,7 @@
                                 </div>
                                 <div class="col-md-4 box">
                                     <div class="card">
-                                        <img class="card-img-top" src="img/keyboard.webp" alt="Sudoku Solver pic">
+                                        <img class="card-img-top" src="img/large/keyboard.webp" alt="Sudoku Solver pic">
                                         <div class="card-body">
                                             <h4 class="card-title">Sudoku-Solver</h4>
                                             <p class="card-text">A python program that will solve a sudoku problem 
@@ -363,7 +372,7 @@
                                 </div>
                                 <div class="col-md-4 box">
                                     <div class="card">
-                                        <img class="card-img-top" src="img/mixNetwork.webp" alt="Mix Network pic">
+                                        <img class="card-img-top" src="img/large/mixNetwork.webp" alt="Mix Network pic">
                                         <div class="card-body">
                                             <h4 class="card-title">Mix Network Deanonymizer</h4>
                                             <p class="card-text">Project using python to implement techniques to deanonymize a example Mix Network. <a target="_blank" rel="noopener noreferrer" href="https://github.com/bitforbyte/Mix-Network-Deanonymizer">Find out more</a>
@@ -396,10 +405,8 @@
             <!-- SuperSlider -->
             <script src="js/jquery.superslides.min.js"></script>
 
-
             <!-- Typed -->
             <script src="js/typed.min.js"></script>
-
 
             <!-- BootStrap -->
             <script src="js/bootstrap.min.js"></script>
